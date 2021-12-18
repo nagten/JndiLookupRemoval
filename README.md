@@ -19,6 +19,7 @@ Requirements:
 # Usage
 
 Update variable $ExcludedFiles to include newer released versions that are not vulnerable
+
 Run script .\JndiLookupRemoval.ps1
 
 # Disclaimer
