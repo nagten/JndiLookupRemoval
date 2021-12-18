@@ -36,7 +36,11 @@ $SearchString = "JndiLookup.class"
 $Drives = [System.IO.DriveInfo]::getdrives() | Where-Object {$_.DriveType -eq 'Fixed'}
 
 foreach($Drive in $Drives) {
+    #Scan all *.jar files
     $VulnerableJarFiles = Get-ChildItem -Path $Drive.RootDirectory -Recurse -Force -Include *.jar -File -ErrorAction SilentlyContinue -Exclude $ExcludedFiles | ForEach-Object {Select-String $SearchString $_} | Select-Object -ExpandProperty Path
+    
+    #Only scan fils that use LOG4J naming convention
+    #$VulnerableJarFiles = Get-ChildItem -Path $Drive.RootDirectory -Recurse -Force -Include log4j-core-*.jar -File -ErrorAction SilentlyContinue -Exclude $ExcludedFiles | ForEach-Object {Select-String $SearchString $_} | Select-Object -ExpandProperty Path
     
     #Remove doubles from list
     $VulnerableJarFiles = $VulnerableJarFiles | select -Unique
