@@ -16,6 +16,11 @@ Requirements:
 
 - Microsoft .NET Framework 4.5 or higher.
 
+# Usage
+
+Update variable $ExcludedFiles to include newer released versions that are not vulnerable
+Run script .\JndiLookupRemoval.ps1
+
 # Disclaimer
 
 The code within this repository comes with no guarantee, the use of this code is your responsibility.
