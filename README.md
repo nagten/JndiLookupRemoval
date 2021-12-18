@@ -20,6 +20,8 @@ Requirements:
 
 Update variable $ExcludedFiles to include newer released versions that are not vulnerable
 
+If you only want to scan LOG4J files instead of all Jar-file please use -Include log4j-core-*.jar instead of -Include *.jar on line 39
+
 Run script .\JndiLookupRemoval.ps1
 
 # Disclaimer
