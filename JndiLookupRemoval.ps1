@@ -30,7 +30,8 @@ $ExcludedFiles = "log4j-core-2.12.2.jar", "log4j-core-2.16.0.jar", "log4j-core-2
 $SearchString = "JndiLookup.class"
 
 #Load IO.Compression library
-[Reflection.Assembly]::LoadWithPartialName('System.IO.Compression')
+Add-Type -AssemblyName System.IO.Compression
+#[Reflection.Assembly]::LoadWithPartialName('System.IO.Compression')
 
 #Get all Fixed drives
 $Drives = [System.IO.DriveInfo]::getdrives() | Where-Object {$_.DriveType -eq 'Fixed'}
