@@ -26,7 +26,7 @@
 #>
 
 #Exclude versions that are not vulnerable
-$ExcludedFiles = "log4j-core-2.12.2.jar", "log4j-core-2.16.0.jar", "log4j-core-2.17.0.jar"
+$ExcludedFiles = "log4j-core-2.3.1.jar", "log4j-core-2.3.2.jar", "log4j-core-2.12.2.jar", "log4j-core-2.12.3.jar", "log4j-core-2.12.4.jar", "log4j-core-2.16.0.jar", "log4j-core-2.17.0.jar", "log4j-core-2.17.1.jar"
 $SearchString = "JndiLookup.class"
 
 #Load IO.Compression library
